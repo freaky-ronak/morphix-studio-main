@@ -9,18 +9,45 @@
 <section class="section">
   <div class="container filters">
     @for (c of categories; track c) {
-      <button class="chip" [class.on]="active() === c" (click)="setFilter(c)">{{ c }}</button>
+      <button class="chip" [class.on]="active() === c" (click)="setFilter(c)">
+        {{ c }}
+      </button>
     }
   </div>
 
+  <!-- ADD THIS ENTIRE BLOCK HERE -->
+  @if(active() === 'Podcast Production'){
+    <div class="container">
+      <div class="podcast-player">
+        <iframe
+          width="100%"
+          height="600"
+          src="https://www.youtube.com/embed/RPpc_yxS34g?autoplay=1&mute=1&loop=1&playlist=RPpc_yxS34g"
+          title="Podcast Production"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  }
+
+  @if(active() !== 'Podcast Production'){
   <div class="container grid work-grid">
     @for (w of works(); track w.title) {
       <a [href]="w.behanceUrl" target="_blank" class="work lift work-link" appReveal>
-        <div class="poster" [style.backgroundImage]="'url(' + w.thumbnail + ')'" aria-label="View {{ w.title }} on Behance">
+        <div class="poster"
+             [style.backgroundImage]="'url(' + w.thumbnail + ')'">
         </div>
-        <div class="meta"><h4>{{ w.title }}</h4><span>{{ w.category }}</span></div>
+
+        <div class="meta">
+          <h4>{{ w.title }}</h4>
+          <span>{{ w.category }}</span>
+        </div>
       </a>
     }
   </div>
+}
 </section>
+
 <app-cta-banner />

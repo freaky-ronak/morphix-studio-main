@@ -11,7 +11,7 @@ import { WORKS, Work } from '../../shared/data/content';
 })
 export class Portfolio {
   private all = WORKS;
-  categories = ['All', 'Promos', 'Reels', 'Motion Graphics', 'Design'];
+  categories = ['All','Podcast Production', 'Promos', 'Reels', 'Motion Graphics', 'Design'];
   active = signal('All');
 
   works = computed<Work[]>(() =>

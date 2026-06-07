@@ -16,3 +16,14 @@
 
 .chip{transition:transform .2s ease,background .25s ease,color .25s ease}
 .chip:hover{transform:translateY(-2px)}
+/* PODCAST PLAYER */
+.podcast-player{
+  margin:40px 0;
+}
+
+.podcast-player iframe{
+  width:100%;
+  border:none;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}

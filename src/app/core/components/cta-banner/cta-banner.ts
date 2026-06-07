@@ -11,7 +11,13 @@ import { RouterLink } from '@angular/router';
           <h3>Ready to take your brand to the next level?</h3>
           <p>Let’s Create Something Amazing Together!</p>
         </div>
-        <a routerLink="/contact" class="btn btn-dark">Get a Free Quote →</a>
+        <a
+  href="https://wa.me/917719759856?text=Hi%20Morphix%20Studio,%20I%20would%20like%20a%20quote%20for%20your%20services."
+  target="_blank"
+  class="btn btn-dark"
+>
+  Get a Free Quote →
+</a>
       </div>
     </section>
   `,

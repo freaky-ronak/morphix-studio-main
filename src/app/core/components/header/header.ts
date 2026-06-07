@@ -12,7 +12,7 @@ export class Header {
   links = [
     { path: '/', label: 'Home', exact: true },
     { path: '/services', label: 'Services', exact: false },
-    { path: '/packages', label: 'Packages', exact: false },
+    // { path: '/packages', label: 'Packages', exact: false },
     { path: '/portfolio', label: 'Portfolio', exact: false },
     { path: '/about', label: 'About Us', exact: false },
     { path: '/contact', label: 'Contact', exact: false },

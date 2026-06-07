@@ -1,6 +1,12 @@
 export interface Pkg { name: string; tag: string; icon: string; price: string; features: string[]; highlight: boolean; }
 export interface Service { title: string; desc: string; icon: string; }
-export interface Work { title: string; category: string; behanceUrl: string; thumbnail: string; }
+export interface Work {
+  title: string;
+  category: string;
+  behanceUrl: string;
+  thumbnail: string;
+  videoUrl?: string;
+}
 
 export const SERVICES: Service[] = [
   { title: 'Video Editing', desc: 'Professional editing that tells your story with impact and creativity.', icon: '🎬' },
@@ -43,6 +49,13 @@ export const WORKS: Work[] = [
   { title: 'Creative Reel Videos', category: 'Reels', behanceUrl: 'https://www.behance.net/gallery/224194705/creative-Reel-Video-all-social-media', thumbnail: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/8314f7224194705.Y3JvcCw4MDgsNjMyLDAsMA.png' },
   { title: '2D Animation', category: 'Motion Graphics', behanceUrl: 'https://www.behance.net/gallery/163524005/2-D-Animation', thumbnail: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/3e6d08163524005.Y3JvcCw4MDgsNjMyLDAsMA.jpg' },
   { title: 'Wedding Invitation Videos', category: 'Motion Graphics', behanceUrl: 'https://www.behance.net/gallery/163522737/Wedding-Invitation-Videos', thumbnail: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/76c7bc163522737.649ab3971923e.png' },
+  {
+  title: 'Vastu, Relationships & Wealth | Podcast',
+  category: 'Podcast Production',
+  behanceUrl: '',
+  thumbnail: 'img/podcast-thumb.jpg',
+  videoUrl: 'https://www.youtube.com/embed/RPpc_yxS34g'
+},
 ];
 
 export const COMPANY = {
@@ -60,7 +73,7 @@ export const STATS = [
   { n: '98%', l: 'Client Satisfaction' },
 ];
 
-export const BRANDS = ['Park Hospital','The Wictory','Third Degree Podcast','Divine Soolutions','Cakes by Shiddat','Crafted by Priya'];
+export const BRANDS = ['Park Hospital','Baby Cure','Jatts Flavour','Pacewalk','The Wictory','Third Degree Podcast','Divine Soolutions','Cakes by Shiddat','Crafted by Priya'];
 
 export const HERO_BADGES = [
   'Creative & Trend-Based Editing','High-Quality Visuals','Fast Delivery','Brand-Focused Content','Professional Support',
