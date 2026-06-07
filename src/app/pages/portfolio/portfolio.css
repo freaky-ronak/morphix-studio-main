@@ -1,0 +1,18 @@
+.page-hero{background:radial-gradient(120% 120% at 80% 0,#2a1b12 0,var(--dark-bg) 60%);color:#fff;padding:70px 0}
+.filters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+.chip{border:1px solid var(--line);background:var(--white);color:var(--ink-2);padding:9px 20px;border-radius:30px;cursor:pointer;font-weight:500;font-size:.9rem;transition:.2s}
+.chip.on,.chip:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
+.work-grid{grid-template-columns:repeat(3,1fr)}
+.work{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--white)}
+.work-link{text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease}
+.work-link:hover{transform:translateY(-8px);box-shadow:0 16px 32px rgba(255,72,0,.15)}
+.poster{width:100%;aspect-ratio:16/9;border:0;display:block;background-size:cover;background-position:center;background-color:#1b1714;cursor:pointer;position:relative;transition:transform .4s ease}
+.work-link:hover .poster{transform:scale(1.05)}
+.meta{padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.meta h4{font-size:.98rem}
+.meta span{font-size:.78rem;color:var(--orange);font-weight:600}
+@media(max-width:920px){.work-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.work-grid{grid-template-columns:1fr}}
+
+.chip{transition:transform .2s ease,background .25s ease,color .25s ease}
+.chip:hover{transform:translateY(-2px)}

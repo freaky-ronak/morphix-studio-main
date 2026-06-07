@@ -1,0 +1,19 @@
+<section class="page-hero">
+  <div class="container"><span class="eyebrow">What We Do</span>
+    <h1 class="h-title">Our <span class="grad">Services</span></h1>
+    <p class="lead" style="margin-left:0">From video editing to motion graphics, we offer creative solutions that help your brand stand out and connect with the right audience.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container grid sv-grid">
+    @for (s of services; track s.title) {
+      <div class="sv lift" appReveal>
+        <div class="sv-ic">{{ s.icon }}</div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.desc }}</p>
+        <a routerLink="/contact" class="more">Learn More →</a>
+      </div>
+    }
+  </div>
+</section>
+<app-cta-banner />

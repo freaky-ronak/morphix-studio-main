@@ -1,0 +1,26 @@
+<section class="page-hero">
+  <div class="container text-center">
+    <span class="eyebrow">Our Work</span>
+    <h1 class="h-title">Our <span class="grad">Portfolio</span></h1>
+    <p class="lead">A glimpse of our creative work that helps brands stand out and make an impact.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container filters">
+    @for (c of categories; track c) {
+      <button class="chip" [class.on]="active() === c" (click)="setFilter(c)">{{ c }}</button>
+    }
+  </div>
+
+  <div class="container grid work-grid">
+    @for (w of works(); track w.title) {
+      <a [href]="w.behanceUrl" target="_blank" class="work lift work-link" appReveal>
+        <div class="poster" [style.backgroundImage]="'url(' + w.thumbnail + ')'" aria-label="View {{ w.title }} on Behance">
+        </div>
+        <div class="meta"><h4>{{ w.title }}</h4><span>{{ w.category }}</span></div>
+      </a>
+    }
+  </div>
+</section>
+<app-cta-banner />

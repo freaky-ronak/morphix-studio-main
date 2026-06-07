@@ -1,0 +1,32 @@
+<footer class="ftr">
+  <div class="container grid cols">
+    <div>
+      <a routerLink="/" class="brand"><img src="logo.png" alt="Morphix Studio" width="34" height="34" /><span>Morphix <strong>Studio</strong></span></a>
+      <p class="tag">Visuals That Inspire.<br/>Stories That Connect.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a routerLink="/">Home</a><a routerLink="/services">Services</a><a routerLink="/packages">Packages</a>
+      <a routerLink="/portfolio">Portfolio</a><a routerLink="/about">About Us</a><a routerLink="/contact">Contact</a>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <span>Video Editing</span><span>Motion Graphics</span><span>Brand Promos</span><span>Graphic Design</span><span>Social Media Content</span>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <a href="mailto:{{c.email}}">✉ {{c.email}}</a>
+      <a href="tel:{{c.phone}}">📞 {{c.phone}}</a>
+      <span>🌐 {{c.website}}</span>
+      <span>📍 {{c.location}}</span>
+    </div>
+    <div>
+      <h4>Working Hours</h4>
+      <span>{{c.hours}}</span>
+    </div>
+  </div>
+  <div class="container bottom">
+    <span>© {{year}} Morphix Studio. All Rights Reserved.</span>
+    <span class="links"><a routerLink="/contact">Privacy Policy</a> · <a routerLink="/contact">Terms &amp; Conditions</a></span>
+  </div>
+</footer>

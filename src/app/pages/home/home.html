@@ -1,0 +1,83 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="welcome">Welcome To</span>
+      <h1><span class="grad">MORPHIX</span> STUDIO</h1>
+      <h2>Visuals That Inspire.<br/>Stories That Connect.</h2>
+      <p>We are a creative video &amp; graphic design agency helping brands, businesses, and content creators stand out in today's fast-paced digital world.</p>
+      <div class="hero-btns">
+        <a routerLink="/services" class="btn btn-primary">Explore Services →</a>
+        <a routerLink="/portfolio" class="btn btn-ghost on-dark">▶ Our Work</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img fetchpriority="high" src="img/hero-camera.svg" alt="Cinema camera setup" width="640" height="520" />
+      <span class="hero-tag">Creating Impactful<br/><strong>Visual Stories ✦</strong></span>
+    </div>
+  </div>
+  <div class="container badges">
+    @for (b of badges; track b) { <div class="badge fade-up" appReveal>◈ {{ b }}</div> }
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="section">
+  <div class="container who-grid" appReveal>
+    <div class="who-copy">
+      <span class="eyebrow">Who We Are</span>
+      <h2 class="h-title">We Don't Just Edit Videos —<br/><span class="grad">We Build Brand Presence.</span></h2>
+      <p>At Morphix Studio, we combine creativity, strategy, and attention to detail to deliver high-quality content tailored to your brand identity.</p>
+      <ul class="who-list">@for (a of aboutList; track a) { <li>▸ {{ a }}</li> }</ul>
+      <span class="sign">Morphix Studio Team</span>
+    </div>
+    <a [href]="portfolioUrl" target="_blank" class="who-media-link">
+      <div class="who-media">
+        <img loading="lazy" decoding="async" src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/c1fda2246816285.Y3JvcCw4MDgsNjMyLDAsMA.png" class="m1" alt="Client Portfolio" width="420" height="260" />
+        <img loading="lazy" decoding="async" src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/dd6a5b246234115.Y3JvcCw4MDgsNjMyLDAsMA.png" class="m2" alt="Motion Reels" width="300" height="200" />
+        <img loading="lazy" decoding="async" src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/8de592234441721.Y3JvcCwxNDAwLDEwOTUsMCw1Mzc.png" class="m3" alt="Video Editor Portfolio" width="300" height="200" />
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-sec">
+  <div class="container grid stats">
+    @for (s of stats; track s.l) {
+      <div class="stat fade-up" appReveal><strong [appCountUp]="s.n"></strong><span>{{ s.l }}</span></div>
+    }
+  </div>
+</section>
+
+<!-- TRUSTED BRANDS -->
+<section class="section brands-sec">
+  <div class="container text-center">
+    <h3 class="brands-title">Trusted by Amazing Brands</h3>
+    <div class="brands">
+      @for (b of brands; track b) { <div class="brand-text fade-up" appReveal>{{ b }}</div> }
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section pk-sec">
+  <div class="container text-center">
+    <span class="eyebrow">Our Packages</span>
+    <h2 class="h-title">Choose The Perfect Package For Your Brand</h2>
+    <p class="lead">Flexible packages designed to meet your needs and help your brand grow.</p>
+  </div>
+  <div class="container grid pk-grid">
+    @for (p of packages; track p.name) {
+      <div class="pk lift" [class.hot]="p.highlight" appReveal>
+        <div class="pk-head"><div class="ic">{{ p.icon }}</div><h3>{{ p.name }}</h3><span class="pk-tag">{{ p.tag }}</span></div>
+        <ul>@for (f of p.features; track f) { <li>✔ {{ f }}</li> }</ul>
+        <div class="pk-price"><small>Starting From</small><div class="amt">₹{{ p.price }}</div><span>/month</span></div>
+        <a routerLink="/contact" class="btn" [class.btn-primary]="!p.highlight" [class.btn-dark]="p.highlight">Choose Plan →</a>
+      </div>
+    }
+  </div>
+  <p class="note container">* Prices are starting from &amp; may vary based on requirements.</p>
+</section>
+
+<app-cta-banner />

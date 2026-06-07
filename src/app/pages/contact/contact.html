@@ -1,0 +1,33 @@
+<section class="ct-sec">
+  <div class="container grid ct-grid">
+    <div class="ct-info">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Let’s Create Something <span class="grad">Amazing</span> Together!</h1>
+      <p>Have a project in mind? We’d love to hear about it. Drop us a message and we’ll get back to you.</p>
+      <ul>
+        <li><span>📞</span><a href="tel:{{c.phone}}">{{ c.phone }}</a></li>
+        <li><span>✉</span><a href="mailto:{{c.email}}">{{ c.email }}</a></li>
+        <li><span>🌐</span>{{ c.website }}</li>
+        <li><span>📍</span>{{ c.location }}</li>
+      </ul>
+    </div>
+
+    <form class="ct-form" [formGroup]="form" (ngSubmit)="submit()">
+      <h3>Send Us a Message</h3>
+      @if (sent()) { <div class="ok">✓ Thanks! Your message has been sent.</div> }
+      <input formControlName="name" placeholder="Your Name" />
+      @if (form.controls.name.touched && form.controls.name.invalid) { <small class="err">Name is required</small> }
+      <input formControlName="email" placeholder="Email Address" />
+      @if (form.controls.email.touched && form.controls.email.invalid) { <small class="err">Valid email required</small> }
+      <input formControlName="phone" placeholder="Phone Number" />
+      <select formControlName="service">
+        <option value="">Project Type</option>
+        <option>Video Editing</option><option>Motion Graphics</option><option>Brand Promo</option>
+        <option>Graphic Design</option><option>Social Media Content</option>
+      </select>
+      <textarea formControlName="message" rows="4" placeholder="Your Message"></textarea>
+      @if (form.controls.message.touched && form.controls.message.invalid) { <small class="err">Message is required</small> }
+      <button type="submit" class="btn btn-primary">Send Message →</button>
+    </form>
+  </div>
+</section>

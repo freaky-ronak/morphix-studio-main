@@ -1,0 +1,20 @@
+<header class="hdr">
+  <div class="container bar">
+    <a routerLink="/" class="brand" (click)="close()">
+      <img src="logo.png" alt="Morphix Studio logo" width="38" height="38" />
+      <span>Morphix <strong>Studio</strong></span>
+    </a>
+
+    <nav class="nav" [class.show]="open()">
+      @for (l of links; track l.path) {
+        <a [routerLink]="l.path" routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: l.exact }" (click)="close()">{{ l.label }}</a>
+      }
+    </nav>
+
+    <a routerLink="/contact" class="btn btn-primary quote" (click)="close()">Get a Quote →</a>
+    <button class="burger" (click)="toggle()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 512 512">
+  <!-- Rounded square background -->
+  <rect x="51" y="43" width="410" height="410" rx="60" fill="#FF4800"/>
+  
+  <!-- Grid lines -->
+  <line x1="180" y1="80" x2="180" y2="380" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  <line x1="380" y1="180" x2="80" y2="180" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  
+  <!-- Pen/Pencil shaft -->
+  <g transform="translate(256,256) rotate(-45)">
+    <rect x="-12" y="-160" width="24" height="280" rx="12" fill="white"/>
+    
+    <!-- Pen tip/point -->
+    <polygon points="0,120 -20,180 20,180" fill="white"/>
+    
+    <!-- Pen top cap -->
+    <circle cx="0" cy="-160" r="14" fill="white"/>
+    <rect x="-8" y="-175" width="16" height="15" rx="2" fill="#FF4800"/>
+  </g>
+</svg>

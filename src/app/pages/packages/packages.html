@@ -1,0 +1,31 @@
+<section class="section pk-sec">
+  <div class="container text-center">
+    <span class="eyebrow">Our Packages</span>
+    <h1 class="h-title">Choose The Perfect Package For Your Brand</h1>
+    <p class="lead">Flexible packages designed to meet your needs and help your brand grow.</p>
+  </div>
+  <div class="container grid pk-grid">
+    @for (p of packages; track p.name) {
+      <div class="pk lift" [class.hot]="p.highlight" appReveal>
+        <div class="pk-head"><div class="ic">{{ p.icon }}</div><h3>{{ p.name }}</h3><span class="pk-tag">{{ p.tag }}</span></div>
+        <ul>@for (f of p.features; track f) { <li>✔ {{ f }}</li> }</ul>
+        <div class="pk-price"><small>Starting From</small><div class="amt">₹{{ p.price }}</div><span>/month</span></div>
+        <a routerLink="/contact" class="btn" [class.btn-primary]="!p.highlight" [class.btn-dark]="p.highlight">Choose Plan →</a>
+      </div>
+    }
+  </div>
+  <p class="note container">* Prices are starting from &amp; may vary based on requirements.</p>
+
+  <div class="container helper" appReveal>
+    <span>Not sure which plan suits you? We’ll help you choose the best package for your goals.</span>
+    <a routerLink="/contact" class="btn btn-primary">Talk to Us →</a>
+  </div>
+
+  <div class="container ex-wrap">
+    <span class="eyebrow">Extra Services</span>
+    <div class="grid ex-grid">
+      @for (e of extras; track e.name) { <div class="ex lift" appReveal><div class="ex-ic">✦</div><h4>{{ e.name }}</h4><span>₹{{ e.price }}</span></div> }
+    </div>
+  </div>
+</section>
+<app-cta-banner />

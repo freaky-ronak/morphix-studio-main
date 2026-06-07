@@ -1,0 +1,101 @@
+:root{
+  --orange:#FF4800;
+  --orange-dark:#e03f00;
+  --orange-soft:#2a1206;
+  --white:#161616;            /* card surface */
+  --surface-2:#0c0c0c;        /* alt section bg / small cards */
+  --bg:#000000;               /* page background */
+  --ink:#ffffff;
+  --ink-2:#d4cfc9;
+  --muted:#9a948d;
+  --line:#262320;
+  --dark-bg:#050505;
+  --dark-card:#161616;
+  --radius:18px;
+  --shadow:0 18px 50px rgba(0,0,0,.55);
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.15;font-weight:700}
+p{margin:0 0 1rem}
+.container{max-width:var(--max);margin:0 auto;padding:0 22px}
+.section{padding:84px 0}
+.eyebrow{color:var(--orange);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px;display:inline-block}
+.h-title{font-size:clamp(1.8rem,3.4vw,2.7rem);font-weight:800}
+.lead{color:var(--muted);max-width:640px;margin:14px auto 0}
+.text-center{text-align:center}
+.grad{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:40px;font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:.2s;white-space:nowrap}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.6px solid var(--line)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.28)}
+.btn-dark{background:#000;color:#fff}
+.btn-dark:hover{background:#1a1a1a}
+.grid{display:grid;gap:24px}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.in{opacity:1;transform:none}
+@media(max-width:760px){.section{padding:60px 0}}
+
+/* ---- Responsive hardening ---- */
+html,body{overflow-x:hidden;max-width:100%}
+img,iframe{max-width:100%}
+@media(max-width:1024px){.container{padding:0 20px}}
+@media(max-width:760px){
+  .section{padding:52px 0}
+  .h-title{font-size:clamp(1.5rem,6vw,2rem)}
+  .lead{font-size:.95rem}
+  .btn{padding:12px 20px;font-size:.9rem}
+  .hero-btns{width:100%}
+  .hero-btns .btn{flex:1;justify-content:center}
+}
+@media(max-width:420px){
+  .container{padding:0 16px}
+  .badges{gap:12px}
+}
+
+/* ===== Animations ===== */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  .fade-up{opacity:1!important;transform:none!important}
+}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,72,0,.45)}70%{box-shadow:0 0 0 16px rgba(255,72,0,0)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes gradientMove{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+
+/* scroll reveal with stagger (set --d via inline style or nth-child) */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.fade-up.in{opacity:1;transform:none}
+.grid > .fade-up:nth-child(2){transition-delay:.08s}
+.grid > .fade-up:nth-child(3){transition-delay:.16s}
+.grid > .fade-up:nth-child(4){transition-delay:.24s}
+.grid > .fade-up:nth-child(5){transition-delay:.32s}
+.grid > .fade-up:nth-child(6){transition-delay:.40s}
+.grid > .fade-up:nth-child(7){transition-delay:.48s}
+
+/* animated gradient primary button */
+.btn-primary{background:linear-gradient(110deg,#FF4800,#ff7a3d,#FF4800);background-size:200% 100%;animation:gradientMove 4s linear infinite alternate;position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg)}
+.btn-primary:hover::after{animation:shimmer 1.1s}
+.btn-primary:hover{transform:translateY(-2px) scale(1.02)}
+.btn{transition:transform .25s ease,background .3s ease,box-shadow .3s ease}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}
+
+/* generic card hover lift (opt-in via .lift) */
+.lift{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s ease,box-shadow .35s ease}
+.lift:hover{transform:translateY(-8px);border-color:var(--orange);box-shadow:0 24px 50px rgba(255,72,0,.18)}

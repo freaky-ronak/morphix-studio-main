@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs><radialGradient id="g" cx="70%" cy="20%" r="90%"><stop offset="0%" stop-color="#3a2415"/><stop offset="55%" stop-color="#160f0b"/><stop offset="100%" stop-color="#000"/></radialGradient></defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g fill="#FF4800" opacity=".12"><circle cx="1180" cy="240" r="220"/></g>
+  <g fill="none" stroke="#FF4800" stroke-width="2" opacity=".18" transform="translate(1080 300)">
+    <rect width="120" height="120" rx="18"/><path d="M30 24v72a6 6 0 0 0 6 6h60" stroke-width="5"/><path d="M96 96V36a6 6 0 0 0-6-6H24" stroke-width="5"/>
+  </g>
+  <text x="60" y="850" fill="#5f5a54" font-family="Poppins,Arial" font-size="22">hero-bg.jpg  (replace with your Figma hero/camera photo)</text>
+</svg>

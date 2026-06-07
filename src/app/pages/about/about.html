@@ -1,0 +1,20 @@
+<section class="page-hero">
+  <div class="container"><span class="eyebrow">Who We Are</span>
+    <h1 class="h-title">We Don’t Just Edit Videos —<br/><span class="grad">We Build Brand Presence.</span></h1>
+    <p class="lead" style="margin-left:0">At Morphix Studio, we combine creativity, strategy, and attention to detail to deliver high-quality content tailored to your brand identity.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid stats">
+    @for (s of stats; track s.l) { <div class="stat lift" appReveal><strong [appCountUp]="s.n"></strong><span>{{ s.l }}</span></div> }
+  </div>
+</section>
+
+<section class="section vsec">
+  <div class="container text-center"><span class="eyebrow">Why Choose Us</span><h2 class="h-title">What Drives Our Work</h2></div>
+  <div class="container grid vgrid">
+    @for (v of values; track v.t) { <div class="vcard lift" appReveal><h3>{{ v.t }}</h3><p>{{ v.d }}</p></div> }
+  </div>
+</section>
+<app-cta-banner />
