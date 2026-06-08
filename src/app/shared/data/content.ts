@@ -49,13 +49,7 @@ export const WORKS: Work[] = [
   { title: 'Creative Reel Videos', category: 'Reels', behanceUrl: 'https://www.behance.net/gallery/224194705/creative-Reel-Video-all-social-media', thumbnail: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/8314f7224194705.Y3JvcCw4MDgsNjMyLDAsMA.png' },
   { title: '2D Animation', category: 'Motion Graphics', behanceUrl: 'https://www.behance.net/gallery/163524005/2-D-Animation', thumbnail: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/3e6d08163524005.Y3JvcCw4MDgsNjMyLDAsMA.jpg' },
   { title: 'Wedding Invitation Videos', category: 'Motion Graphics', behanceUrl: 'https://www.behance.net/gallery/163522737/Wedding-Invitation-Videos', thumbnail: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/76c7bc163522737.649ab3971923e.png' },
-  {
-  title: 'Vastu, Relationships & Wealth | Podcast',
-  category: 'Podcast Production',
-  behanceUrl: '',
-  thumbnail: 'img/podcast-thumb.jpg',
-  videoUrl: 'https://www.youtube.com/embed/RPpc_yxS34g'
-},
+  
 ];
 
 export const COMPANY = {
