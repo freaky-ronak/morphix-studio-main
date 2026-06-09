@@ -67,7 +67,7 @@ export const STATS = [
   { n: '98%', l: 'Client Satisfaction' },
 ];
 
-export const BRANDS = ['Park Hospital','Baby Cure','Jatts Flavour','Pacewalk','The Wictory','Third Degree Podcast','Divine Soolutions','Cakes by Shiddat','Crafted by Priya'];
+export const BRANDS = ['Suvich Astro','Winni','Punjab Cancer Care','Park Hospital','Baby Cure','Jatts Flavour','Pacewalk','The Wictory','Third Degree Podcast','Divine Soolutions','Cakes by Shiddat','Crafted by Priya'];
 
 export const HERO_BADGES = [
   'Creative & Trend-Based Editing','High-Quality Visuals','Fast Delivery','Brand-Focused Content','Professional Support',
